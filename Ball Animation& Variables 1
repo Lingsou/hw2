@@ -1,0 +1,32 @@
+function setup() {
+	createCanvas(500, 500);
+}
+
+var ball = 0
+var ballSpeed = 7
+var ballDirection = ballSpeed
+
+
+function draw() {
+	background(220);
+	ellipse(width/2,ball,50);
+	fill(255,255,0)
+
+	ball = ball + ballDirection
+	
+	if (ball > height) {
+	ballDirection = -7
+	}
+	
+	if (ball < 0) {
+		ballDirection = 7
+	}
+	
+	if (ball>200 && ball <300) {
+		fill (0,120,255)
+	}
+	
+	if (ball<250){
+		ellipse(width/2, ball, 80)
+		}
+}
